@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../script/login.js"></script>
     <title>FundooNote</title>
 </head>
 
@@ -25,25 +26,31 @@
                     <h3>Sign in</h3>
                     <p id="p1">Use your Fundoo account</p>
                 </div>
-                <form>
+                <form id="form">
                     <label id="l1">Sign in to your Fundoo account</label>
 
                     <div class="login">
-                        <input id="email" type="text" placeholder="Email">
-                        <input id="pwd" type="text" placeholder="Password">
+                        <div id="e">
+                            <input id="email" type="text" placeholder="Email *">
+                            <small>Error message</small>
+                        </div>
+                        <div id="p">
+                            <input id="pwd" type="password" placeholder="Password *">
+                            <small>Error message</small>
+                        </div>
                     </div>
 
                     <div class="checkbox">
                         <div>
-                            <input id="check" type="checkbox">
+                            <input id="check" onclick="show()" type="checkbox">
                             <label for="check">Show password</label>
-                        </div>                        
+                        </div>
                         <button id="fpwd">Forgot password?</button>
                     </div>
 
                     <div class="buttons">
-                        <button id="signin">Sign in instead</button>
-                        <button id="next">Next</button>
+                        <button id="signin">Create Account</button>
+                        <button type="submit" id="next" onclick="validate()">Next</button>
                     </div>
                 </form>
             </div>
