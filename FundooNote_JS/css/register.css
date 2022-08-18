@@ -163,11 +163,12 @@ input[type="checkbox"]{
     color: white;
 }
 #signin{
+    text-decoration: none;
     background-color: transparent;
     border: none;
     border-radius: 5px;
     width: 30%;
     height: 40px;
-    font-size: large;
-    color: #1a73e8;
+    font-size: 21px;
+    color: #1a73e8;    
 }
