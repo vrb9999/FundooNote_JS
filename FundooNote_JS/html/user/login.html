@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/user/login.css">
+    <script src="../../script/user/login.js"></script>
+    <title>FundooNote</title>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div class="content">
+                <div class="heading">
+                    <h2>
+                        <span style="color: #4285F4">F</span>
+                        <span style="color: #EA4335">u</span>
+                        <span style="color: #FBBC05">n</span>
+                        <span style="color: #4285F4">d</span>
+                        <span style="color: #34A853">o</span>
+                        <span style="color: #EA4335">o</span>
+                    </h2>
+                    <h3>Sign in</h3>
+                    <p id="p1">Use your Fundoo account</p>
+                </div>
+                <form id="form">
+                    <label id="l1">Sign in to your Fundoo account</label>
+
+                    <div class="login">
+                        <div id="e">
+                            <input id="email" type="text" placeholder="Email *">
+                            <small>Error message</small>
+                        </div>
+                        <div id="p">
+                            <input id="pwd" type="password" placeholder="Password *">
+                            <small>Error message</small>
+                        </div>
+                    </div>
+
+                    <div class="checkbox">
+                        <div>
+                            <input id="check" onclick="show()" type="checkbox">
+                            <label for="check">Show password</label>
+                        </div>
+                        <button id="fpwd">Forgot password?</button>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="register.html" id="signup">Create Account</a>
+                        <button type="submit" id="next" onclick="validate()">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

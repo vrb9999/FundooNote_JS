@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/user/register.css">
+    <script src="../../script/user/register.js"></script>
+    <title>FundooNote</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div class="left">
+                <h2>
+                    <span style="color: #4285F4">F</span>
+                    <span style="color: #EA4335">u</span>
+                    <span style="color: #FBBC05">n</span>
+                    <span style="color: #4285F4">d</span>
+                    <span style="color: #34A853">o</span>
+                    <span style="color: #EA4335">o</span>
+                </h2>
+                <h3>Create your Fundoo Account</h3>
+                <form id="form">
+                    <div class="name" id="name">
+                        <input id="fname" type="text" placeholder="First name">&nbsp;&nbsp;
+                        <input id="lname" type="text" placeholder="Last name">
+                        <div><small>Error message</small></div>
+                        
+                    </div>
+
+                    <div class="email" id="email">
+                        <input id="user" type="text" placeholder="sample@gmail.com">
+                        <div><small>Error message</small></div>
+                        <span class="hint">You can use letters, numbers & periods</span>                        
+                    </div>
+                    
+                    <!-- <p>You can use letters, numbers & periods</p> -->
+
+                    <div>
+                        <input type="button" id="cemail" value="Use my current email address instead"></input>
+                    </div>
+
+                    <div class="password" id="password">
+                        <input id="pwd" type="password" placeholder="Password">&nbsp;&nbsp;
+                        <input id="cpwd" type="password" placeholder="Confirm">
+                        <div><small>Error message</small></div>
+                        <div class="hint"><span>Use 8 or more characters with a mix of letters, numbers & symbols</span>
+                        </div>                        
+                    </div>
+
+                    <!-- <p>Use 8 or more characters with a mix of letters, numbers & symbols</p> -->
+
+                    <div class="checkbox">
+                        <input id="check" onclick="show()" type="checkbox">
+                        <label for="check">Show password</label>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="login.html" id="signin">Sign in instead</a>
+                        <button id="next" type="submit" onclick="validate()">Next</button>
+                    </div>
+                </form>
+            </div>
+            <div class="right">
+                <img src="../../assests/account.svg" alt="">
+                <p>One account. All of Fundoo working for you.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
