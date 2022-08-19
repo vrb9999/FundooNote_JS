@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/user/register.css">
     <script src="../../script/user/register.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>FundooNote</title>
 </head>
 <body>
@@ -58,7 +59,7 @@
 
                     <div class="buttons">
                         <a href="login.html" id="signin">Sign in instead</a>
-                        <button id="next" type="submit" onclick="validate()">Next</button>
+                        <button id="next" type="submit" onclick="validate(), register()">Next</button>
                     </div>
                 </form>
             </div>

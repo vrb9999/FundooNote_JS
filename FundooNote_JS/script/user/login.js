@@ -61,3 +61,28 @@ function validateEmail(email) {
 function validatePwd(pwd) {
     return /(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$_])[a-zA-Z0-9@#$_]{8,}/.test(pwd);
 }
+
+function login(){
+    let email = document.getElementById("email");
+    let password = document.getElementById("pwd");
+    let data = {
+        email:email.value,
+        password:password.value
+    }
+    console.log(data);
+
+    $.ajax({
+        type:'Post',
+        URL:'https://localhost:44346/User/LoginUser',
+        data:JSON.stringify(data),
+        Headers:{
+            'Content-Type': 'application/json'
+        },
+        success: function(result){
+            console.log(result);
+        },
+        error: function(error){
+            console.log(error);
+        }
+    })
+}

@@ -68,6 +68,7 @@ function validate() {
         }
     })
 
+    
 }
 
 function onSuccess(input) {
@@ -96,4 +97,33 @@ function validatePwd(pwd) {
 
 function validateName(name) {
     return /[A-Z]{1}[a-z]{3,20}/.test(name);
+}
+
+function register(){
+    let firstName = document.getElementById("fname");
+    let lastName = document.getElementById("lname");
+    let email = document.getElementById("user");
+    let password = document.getElementById("pwd");
+    let data = {
+        firstName:firstName.value,
+        lastName:lastName.value,
+        email:email.value,
+        password:password.value
+    }
+    console.log(data);
+
+    $.ajax({
+        type:'Post',
+        URL:'https://localhost:44346/User/AddUser',
+        data:JSON.stringify(data),
+        Headers:{
+            'Content-Type': 'application/json'
+        },
+        success: function(result){
+            console.log(result);
+        },
+        error: function(error){
+            console.log(error);
+        }
+    })
 }
