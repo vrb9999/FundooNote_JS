@@ -113,10 +113,10 @@ function register(){
     console.log(data);
 
     $.ajax({
-        type:'Post',
-        URL:'https://localhost:44346/User/AddUser',
+        url:'https://localhost:44346/User/AddUser',
+        type:'POST',
         data:JSON.stringify(data),
-        Headers:{
+        headers:{
             'Content-Type': 'application/json'
         },
         success: function(result){

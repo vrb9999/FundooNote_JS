@@ -72,10 +72,10 @@ function login(){
     console.log(data);
 
     $.ajax({
-        type:'Post',
-        URL:'https://localhost:44346/User/LoginUser',
+        url:'https://localhost:44346/User/LoginUser',
+        type:'POST',
         data:JSON.stringify(data),
-        Headers:{
+        headers:{
             'Content-Type': 'application/json'
         },
         success: function(result){
