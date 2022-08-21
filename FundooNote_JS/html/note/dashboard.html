@@ -11,36 +11,31 @@
 </head>
 
 <body>
-    <header>
+    <nav>
         <div class="menu">
-            <nav>
-                <ul  class="top-nav-links">
-                    <li><a href="#">menu</a></li>
-                    <img src="../../assests/keep_logo.png">
-                </ul>
-            </nav>
+            <div id="menu">
+                <button><img src="../../assests/dashboard/menu.svg"></img></button>
+            </div>
+            <img src="../../assests/keep_logo.png">
+            <span class="logo-text">Fundoo</span>
         </div>
-        <div>
-            <input id="search" type="text" placeholder="Search">
+
+        <div class="search">
+            <i class="search-icon"><img src="../../assests/dashboard/search.svg"></i>
+            <input class="search-text" type="text" placeholder="Search" />
+            <i class="search-icon" id="cancel"><img src="../../assests/dashboard/close.svg"></i>
         </div>
+
         <div class="tools">
-            <nav>
-                <ul class="top-nav-links">
-                    <li><a href="#">refresh</a></li>
-                    <li><a href="#">view</a></li>
-                    <li><a href="#">settings</a></li>
-                </ul>
-            </nav>
+            <button><img src="../../assests/dashboard/refresh.svg"></button>
+            <button><img src="../../assests/dashboard/view.svg"></button>
+            <button><img src="../../assests/dashboard/settings.svg"></button>
         </div>
         <div class="user">
-            <nav>
-                <ul class="top-nav-links">
-                    <li><a href="#">apps</a></li>
-                    <li><a href="#">account</a></li>
-                </ul>
-            </nav>
+            <button><img src="../../assests/dashboard/apps.svg"></button>
+            <button><img src="../../assests/dashboard/user.svg"></button>
         </div>
-    </header>
+    </nav>
 </body>
 
 </html>

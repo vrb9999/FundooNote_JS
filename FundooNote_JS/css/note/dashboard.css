@@ -1,48 +1,77 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
 }
 
-li, a{
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 40px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  border-bottom: 1px solid #dadce0;
+  padding: 20px;
+  color: #5f6368;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid black;
+/* ======================== button ======================== */
+button img{
+    width: 30px;
 }
 
-.top-nav-links{
-    list-style-type: none;
-}
-
-.top-nav-links li{
-    display: inline-block;
-    padding: 0px 20px;
-}
-.top-nav-links li a{
-    transition: all 0.2s ease 0s;
-}
-
-.top-nav-links li a:hover{
-    color: rgba(132, 141, 144, 0.8);
-}
-
-#search{
-    width: 200%;
-    height: 30px;
-    outline: none;
+  button{
+    border: none;
+    opacity: 0.6;
     background-color: transparent;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
 }
 
-img{
-    width: 50px;
+  button:hover{
+    opacity: 1;
+    background-color: #e5e5e5;
+}
+
+/* ======================== menu ======================== */
+.menu {
+  display: flex;
+  align-items: center;
+}
+#menu{
+    margin-right: 30px;
+}
+.logo-text {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* ======================== search ======================== */
+.search {
+  background: rgb(241, 243, 244);
+  width: 692px;
+  height: 48px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+.search-text{
+    border: none;
+    background-color: rgb(241, 243, 244);
+    outline: none;
+    font-size: large;
+    width: 87%;
+    height: 100%;
+}
+.search-icon img{
+    width: 25px;
+    opacity: 0.6;
+}
+.search-icon{
+    padding: 10px;
+    padding-top: 15px;
 }
