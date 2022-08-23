@@ -21,8 +21,7 @@ function closeNav(){
 }
 
 var noteArray;
-
-
+getAllNotes();
 function getAllNotes(){
     let token = localStorage.getItem('token');
 
@@ -31,7 +30,7 @@ function getAllNotes(){
         type:'GET',
         headers:{
             'Content-Type': 'application/json',
-            'Authorization': token
+            'Authorization': "Bearer " +token
         },
         success: function(result){
             console.log(result.data);
@@ -43,15 +42,15 @@ function getAllNotes(){
     })
 }
 
-document.getElementById('notes').addEventListener('click', (notes)=>{
-    console.log("Notes : ", notes.target);
-})
+// document.getElementById('notes').addEventListener('click', (notes)=>{
+//     console.log("Note : ", notes.target);
+// })
 
-function displayNotes(noteArray){
-    console.log("Notes list : ", noteArray);
+// function displayNotes(noteArray){
+//     console.log("Notes list : ", noteArray);
 
     // document.getElementById('display').innerHTML = notesList.map((notes)=>
     // ``
     // )
 
-}
+//}
