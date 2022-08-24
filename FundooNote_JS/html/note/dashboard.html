@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/note/dashboard.css">
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>FundooNote</title>
 </head>
@@ -44,7 +43,7 @@
         <nav id="side-nav" class="side-nav">
             <div class="side-nav-content">
                 <ul class="nav-list">
-                    <li class="nav-list-item">
+                    <li class="nav-list-item" id="notes">
                         <i><img src="../../assests/dashboard/bulb.svg"></i>
                         <span>
                             <a href="#">Notes</a>
@@ -62,13 +61,13 @@
                             <a href="#">Edit labels</a>
                         </span>
                     </li>
-                    <li class="nav-list-item">
+                    <li class="nav-list-item" id="archive">
                         <i><img src="../../assests/dashboard/archive.svg"></i>
                         <span>
                             <a href="#">Archive</a>
                         </span>
                     </li>
-                    <li class="nav-list-item">
+                    <li class="nav-list-item" id="trash">
                         <i><img src="../../assests/dashboard/trash.svg"></i>
                         <span>
                             <a href="#">Bin</a>
@@ -77,61 +76,58 @@
                 </ul>
             </div>
         </nav>
-        
+
         <div id="display-area">
-            <a id="notes" onclick="getAllNotes()">Notes</a>
-            <a id="archive">Archive</a>
-            <a id="trash">Trash</a>
+            <div id="display"></div>
 
-        <div id="display"></div>
-
-        <div class="note">
-            <form>
-                <div class="create-note-header">
-                    <input class="create-note" onclick="openCard()" id="btn1" type="text" placeholder="Title" />
-                    <button>
-                        <img src="../../assests/create_note/pin.svg" />
-                    </button>
-                </div>
-                <div class="create-note-body">
-                    <textarea class="create-note" id="btn2" type="text" placeholder="Take a note..."></textarea>
-                </div>
-                <div class="create-note-footer">
-                    <div class="icons">
-                        <button>
-                            <img src="../../assests/create_note/remind.svg" />
-                        </button>
-                        <button>
-                            <img src="../../assests/create_note/person.svg" />
-                        </button>
-                        <button>
-                            <img src="../../assests/create_note/color.svg" />
-                        </button>
-                        <button>
-                            <img src="../../assests/create_note/image.svg" />
-                        </button>
-                        <button>
-                            <img src="../../assests/create_note/archive.svg" />
-                        </button>
-                        <button>
-                            <img src="../../assests/create_note/more.svg" />
-                        </button>
-                        <button>
-                            <img src="../../assests/create_note/undo.svg" />
-                        </button>
-                        <button>
-                            <img src="../../assests/create_note/redo.svg" />
+            <div class="note">
+                <form id="form">
+                    <div class="create-note-header">
+                        <input class="create-note" id="title" type="text" placeholder="Title" autocomplete="off" onclick="openCreateNote()" />
+                        <button id="pin">
+                            <img src="../../assests/create_note/pin.svg" />
                         </button>
                     </div>
-                    <div class="close">
-                        <button onclick="closeCard()">
-                            Close
-                        </button>
+                    <div class="create-note-body">
+                        <textarea class="create-note" id="description" type="text" placeholder="Take a note..."
+                            autocomplete="off"></textarea>
                     </div>
-                </div>
-            </form>
+                    <div class="create-note-footer">
+                        <div class="icons">
+                            <button>
+                                <img src="../../assests/create_note/remind.svg" />
+                            </button>
+                            <button>
+                                <img src="../../assests/create_note/person.svg" />
+                            </button>
+                            <button id="color">
+                                <img src="../../assests/create_note/color.svg" />
+                            </button>
+                            <button>
+                                <img src="../../assests/create_note/image.svg" />
+                            </button>
+                            <button>
+                                <img src="../../assests/create_note/archive.svg" />
+                            </button>
+                            <button>
+                                <img src="../../assests/create_note/more.svg" />
+                            </button>
+                            <button>
+                                <img src="../../assests/create_note/undo.svg" />
+                            </button>
+                            <button>
+                                <img src="../../assests/create_note/redo.svg" />
+                            </button>
+                        </div>
+                        <div class="close">
+                            <button onclick="closeCreateNote(), createNote()">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </form>
 
-        </div>
+            </div>
         </div>
     </main>
     <script src="../../script/note/dashboard.js"></script>
