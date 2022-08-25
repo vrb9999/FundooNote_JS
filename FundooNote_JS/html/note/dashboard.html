@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <nav class="toolbar">
+        <nav id="toolbar" class="toolbar">
             <div class="menu">
                 <div id="menu"><button onclick="menutoggle()" id="toggle">
                         <img src="../../assests/dashboard/menu.svg"></img></button>
@@ -43,7 +43,7 @@
         <nav id="side-nav" class="side-nav">
             <div class="side-nav-content">
                 <ul class="nav-list">
-                    <li class="nav-list-item" id="notes">
+                    <li class="nav-list-item active" id="notes">
                         <i><img src="../../assests/dashboard/bulb.svg"></i>
                         <span>
                             <a href="#">Notes</a>
@@ -78,12 +78,11 @@
         </nav>
 
         <div id="display-area">
-            <div id="display"></div>
 
             <div class="note">
                 <form id="form">
                     <div class="create-note-header">
-                        <input class="create-note" id="title" type="text" placeholder="Title" autocomplete="off" onclick="openCreateNote()" />
+                        <input class="create-note" id="title" type="text" placeholder="Take a note ..." autocomplete="off" onclick="openCreateNote()" />
                         <button id="pin">
                             <img src="../../assests/create_note/pin.svg" />
                         </button>
@@ -128,7 +127,10 @@
                 </form>
 
             </div>
+
+            <div id="display"></div>
         </div>
+        
     </main>
     <script src="../../script/note/dashboard.js"></script>
 </body>
