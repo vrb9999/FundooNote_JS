@@ -262,7 +262,7 @@ textarea::-webkit-scrollbar{
     flex-wrap: wrap;
     height: fit-content;
     margin-top: 70px;
-    margin-left: 45px;
+    margin-left: 120px;
 }
 
 .displayNote{
@@ -295,7 +295,7 @@ textarea::-webkit-scrollbar{
 .display-icons button{
     width: 40px;
     height: 40px;
-    margin-right: 15px;
+    margin-right: 5px;
     margin-left: 5px;
     opacity: 1;
 }
@@ -318,4 +318,143 @@ textarea::-webkit-scrollbar{
 #d{
     font-size: 20px;
     font-family: "Roboto", sans-serif;
+}
+
+.displayTrashNote{
+    display: block;
+    border: 1px solid rgb(215, 212, 212);
+    border-radius: 8px;    
+    min-width: 300px;
+    height: auto;
+    margin: 5px;
+}
+
+.displayTrashNote:hover{
+    box-shadow: 0px 0px 3px gray;
+}
+
+.displayTrashNote:hover .display-icons{
+    visibility: visible;
+}
+
+.dropdown-color{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown p:hover {background-color: #ddd;}
+
+.dropdown-color:hover .dropdown-content{
+    display: block;
+}
+
+
+.popup{
+    position: absolute;
+    background-color: #a2a3a5;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: 0.7s;
+}
+
+.popup-content{
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.visible{
+    visibility: visible;
+}
+
+
+/* ======================================================= Update Note ======================================================= */
+
+.u-note{
+    position: relative;
+    background-color: white;
+    width: 700px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px 0.5px darkgray;
+}
+
+.u-note .u-create-note{
+    margin: 0px 0px 4px 13px;
+    font-size: 17px;
+    font-family: Roboto, Arial, sans-serif;
+    border:0;
+    outline: 0;
+    border-radius: 8px;
+    width: 90%;
+}
+
+::-webkit-input-placeholder {
+    text-decoration: none solid rgb(19, 20, 21);
+    font-weight: 550;
+}
+
+#u-form{
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.u-create-note-header{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.u-create-note-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+#title{
+    padding-top: 10px;
+}
+
+textarea{
+    margin-top: 10%;
+   padding-top: 16px;
+   resize:none;
+   outline: none;
+}
+
+textarea::-webkit-scrollbar{
+    width: 0px;
+}
+
+.u-close button{
+    border: none;
+    border-radius: 5px;
+    opacity: 0.8;
+    width: 85px;
+    height: 40px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 18px;
 }

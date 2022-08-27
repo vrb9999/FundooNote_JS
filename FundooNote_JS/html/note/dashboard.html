@@ -49,13 +49,13 @@
                             <a href="#">Notes</a>
                         </span>
                     </li>
-                    <li class="nav-list-item">
+                    <li class="nav-list-item" id="reminder">
                         <i><img src="../../assests/dashboard/reminder.svg"></i>
                         <span>
                             <a href="#">Reminders</a>
                         </span>
                     </li>
-                    <li class="nav-list-item">
+                    <li class="nav-list-item" id="edit">
                         <i><img src="../../assests/dashboard/edit.svg"></i>
                         <span>
                             <a href="#">Edit labels</a>
@@ -82,7 +82,8 @@
             <div class="note">
                 <form id="form">
                     <div class="create-note-header">
-                        <input class="create-note" id="title" type="text" placeholder="Take a note ..." autocomplete="off" onclick="openCreateNote()" />
+                        <input class="create-note" id="title" type="text" placeholder="Take a note ..."
+                            autocomplete="off" onclick="openCreateNote()" />
                         <button id="pin">
                             <img src="../../assests/create_note/pin.svg" />
                         </button>
@@ -99,7 +100,7 @@
                             <button>
                                 <img src="../../assests/create_note/person.svg" />
                             </button>
-                            <button id="color">
+                            <button>
                                 <img src="../../assests/create_note/color.svg" />
                             </button>
                             <button>
@@ -130,9 +131,11 @@
 
             <div id="display"></div>
         </div>
-        
+
     </main>
     <script src="../../script/note/dashboard.js"></script>
+    <script src="../../script/note/update.js"></script>
 </body>
 
 </html>
+
