@@ -341,6 +341,10 @@ textarea::-webkit-scrollbar{
     position: relative;
     display: inline-block;
 }
+.dropdown-more{
+    position: relative;
+    display: inline-block;
+}
 
 .dropdown-content {
     display: none;
@@ -352,17 +356,29 @@ textarea::-webkit-scrollbar{
     z-index: 1;
   }
   
-  .dropdown-content p {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown p:hover {background-color: #ddd;}
+.dropdown-content :hover {
+    background-color: #ddd;    
+}
 
 .dropdown-color:hover .dropdown-content{
     display: block;
+}
+.dropdown-more:hover #more-list{
+    display: block;
+}
+
+#more-list{
+    display: none;
+    flex-direction: column;
+    padding: 5px;
+}
+#more-list button{
+    color: black;
+    width: 150px;
+    height: auto;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 
@@ -397,7 +413,7 @@ textarea::-webkit-scrollbar{
     box-shadow: 0px 1px 5px 0.5px darkgray;
 }
 
-.u-note .u-create-note{
+.u-note .update-note{
     margin: 0px 0px 4px 13px;
     font-size: 17px;
     font-family: Roboto, Arial, sans-serif;
@@ -419,13 +435,13 @@ textarea::-webkit-scrollbar{
     white-space: nowrap;
 }
 
-.u-create-note-header{
+.update-note-header{
     display: flex;
     flex-direction: row;
     position: relative;
 }
 
-.u-create-note-footer{
+.update-note-footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -433,7 +449,7 @@ textarea::-webkit-scrollbar{
     padding-bottom: 5px;
 }
 
-#title{
+#u-title{
     padding-top: 10px;
 }
 
